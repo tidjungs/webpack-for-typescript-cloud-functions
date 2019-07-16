@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "lib": [
+      "es2017",
+      "dom",
+      "esnext.asynciterable"
+    ],
+    "rootDir": "./src",
+    "outDir": "./dist",
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/tests"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
+}

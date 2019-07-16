@@ -1,0 +1,32 @@
+{
+  "name": "deploy-graphql-cloud-function-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:grahpql": "npm-run-all --parallel dev:grahpql:build dev:graphql:watch",
+    "dev:grahpql:build": "webpack --watch --config src/functions/graphql/webpack.config.js",
+    "dev:graphql:watch": "npm-watch dev:graphql:cloud",
+    "dev:graphql:cloud": "functions-framework --target=graphql"
+  },
+  "watch": {
+    "dev:graphql:cloud": "dist/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-cloud-functions": "^2.6.9",
+    "graphql": "^14.4.2",
+    "typescript": "^3.5.3",
+    "webpack": "^4.35.3"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^1.1.2",
+    "@types/graphql": "^14.2.2",
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.6.0",
+    "ts-loader": "^6.0.4",
+    "webpack-cli": "^3.3.6",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
